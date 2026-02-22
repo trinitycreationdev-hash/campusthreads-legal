@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CampusThreads – Delete Account Request</title>
+  <meta name="description" content="Request deletion of your CampusThreads account and data." />
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #161616;
+      --text: #ffffff;
+      --muted: #b3b3b3;
+      --accent: #1db954;
+      --danger: #ff4d4d;
+      --border: #2a2a2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 720px;
+      padding: 24px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+    p {
+      color: var(--muted);
+    }
+    .notice {
+      border-left: 4px solid var(--danger);
+      padding: 12px 16px;
+      background: #1a0f0f;
+      border-radius: 8px;
+      margin: 16px 0 24px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0f0f0f;
+      color: var(--text);
+      outline: none;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+    }
+    button {
+      margin-top: 16px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: none;
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover {
+      filter: brightness(1.05);
+    }
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Request Account Deletion</h1>
+      <p>
+        This page is for users of <strong>CampusThreads</strong> who want to request deletion of their account and associated data.
+      </p>
+
+      <div class="notice">
+        <strong>Important:</strong> Once your deletion request is processed, your account and data will be permanently deleted.
+        Deletions are completed within <strong>30 days</strong> of request for security and verification purposes.
+      </div>
+
+      <p>
+        If you can still access the app, you can also delete your account directly from the app’s Settings.
+        Otherwise, use the form below.
+      </p>
+
+      <!-- This form opens the user's email client with prefilled details -->
+      <form action="mailto:trinitycreation.dev@gmail.com" method="post" enctype="text/plain">
+        <label for="email">Email used in CampusThreads (required)</label>
+        <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+
+        <label for="message">Additional details (optional)</label>
+        <textarea id="message" name="Message" rows="5" placeholder="You can add any details here..."></textarea>
+
+        <button type="submit">Send Deletion Request</button>
+      </form>
+
+      <p style="margin-top:16px; font-size:14px; color:var(--muted);">
+        By submitting this request, you confirm that you are the owner of the account associated with the provided email address.
+      </p>
+    </div>
+
+    <div class="footer">
+      © <span id="year"></span> CampusThreads • Contact: 
+      <a href="mailto:trinitycreation.dev@gmail.com">trinitycreation.dev@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
