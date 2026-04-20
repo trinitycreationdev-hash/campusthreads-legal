@@ -1,184 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flap – Delete Account Request</title>
-  <meta name="description" content="Request deletion of your Flap account and data." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flap – Delete Account Request</title>
+<meta name="description" content="Request deletion of your Flap account and data." />
 
-  <style>
-    :root {
-      --bg: #0f0f0f;
-      --card: #161616;
-      --text: #ffffff;
-      --muted: #b3b3b3;
-      --accent: #ffffff;
-      --danger: #ff4d4d;
-      --border: #2a2a2a;
-    }
+<style>
+:root {
+--bg: #0f0f0f;
+--card: #161616;
+--text: #ffffff;
+--muted: #b3b3b3;
+--danger: #ff4d4d;
+--border: #2a2a2a;
+}
 
-    * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+body {
+margin: 0;
+font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+}
 
-    .container {
-      max-width: 800px;
-      padding: 24px;
-      margin: 0 auto;
-    }
+.container {
+max-width: 800px;
+padding: 24px;
+margin: 0 auto;
+}
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 20px;
-    }
+.card {
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: 16px;
+padding: 24px;
+margin-bottom: 20px;
+}
 
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
-    }
+h1 { font-size: 28px; margin-top: 0; }
 
-    h2 {
-      margin-top: 0;
-    }
+p, li { color: var(--muted); }
 
-    p, li {
-      color: var(--muted);
-    }
+.notice {
+border-left: 4px solid var(--danger);
+padding: 12px 16px;
+background: #1a0f0f;
+border-radius: 8px;
+margin: 16px 0 24px;
+}
 
-    .notice {
-      border-left: 4px solid var(--danger);
-      padding: 12px 16px;
-      background: #1a0f0f;
-      border-radius: 8px;
-      margin: 16px 0 24px;
-    }
+button {
+margin-top: 16px;
+padding: 12px 18px;
+border-radius: 12px;
+border: none;
+background: #ffffff;
+color: #000;
+font-weight: 700;
+}
 
-    label {
-      display: block;
-      margin: 12px 0 6px;
-      font-weight: 600;
-      color: var(--text);
-    }
+.footer {
+margin-top: 24px;
+text-align: center;
+color: var(--muted);
+font-size: 14px;
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: #0f0f0f;
-      color: var(--text);
-      outline: none;
-    }
+a { color: #ffffff; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-    button {
-      margin-top: 16px;
-      padding: 12px 18px;
-      border-radius: 12px;
-      border: none;
-      background: #ffffff;
-      color: #000;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .footer {
-      margin-top: 24px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    a { color: #ffffff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    ul, ol {
-      padding-left: 20px;
-    }
-  </style>
+ul, ol { padding-left: 20px; }
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <div class="card">
-    <h1>Request Account Deletion</h1>
+<div class="card">
+<h1>Request Account Deletion</h1>
 
-    <p>
-      This page is for users of <strong>Flap</strong> who want to request deletion of their account and associated data.
-    </p>
+<p>
+This page is for users of <strong>Flap</strong> who want to request deletion of their account and associated data.
+</p>
 
-    <div class="notice">
-      <strong>Important:</strong> Once your deletion request is processed, your account and data will be permanently deleted.
-      Deletions are completed within <strong>30 days</strong> for security and verification purposes.
-    </div>
+<div class="notice">
+<strong>Important:</strong> Once your deletion request is processed, your account and data will be permanently deleted.
+This process may take up to <strong>30 days</strong>.
+</div>
 
-    <p>
-      If you can access the app, you can delete your account directly from the app settings.
-      Otherwise, use the option below.
-    </p>
-  </div>
+<p>
+If you can access the app, we recommend deleting your account directly from the app settings.
+</p>
+</div>
 
-  <div class="card">
-    <h2>How to Delete Your Account from the App</h2>
-    <ol>
-      <li>Open the Flap app</li>
-      <li>Go to <strong>Settings</strong></li>
-      <li>Tap on <strong>Delete Account</strong></li>
-      <li>Confirm your choice</li>
-    </ol>
-  </div>
+<div class="card">
+<h2>How to Delete Your Account from the App</h2>
+<ol>
+<li>Open the Flap app</li>
+<li>Go to <strong>Settings</strong></li>
+<li>Tap on <strong>Delete Account</strong></li>
+<li>Confirm your request</li>
+</ol>
+</div>
 
-  <div class="card">
-    <h2>What Data Is Deleted</h2>
-    <ul>
-      <li>Your profile information (username, avatar)</li>
-      <li>Your posts, comments, and uploaded images</li>
-      <li>Your likes and interactions</li>
-      <li>Your authentication account</li>
-    </ul>
-  </div>
+<div class="card">
+<h2>What Data Is Deleted</h2>
+<ul>
+<li>Your account information (username, profile details)</li>
+<li>Your collections and all associated content</li>
+<li>Images and media you uploaded</li>
+<li>Logs or text entries within collections</li>
+<li>Access to shared collections</li>
+<li>Your authentication account</li>
+</ul>
+</div>
 
-  <div class="card">
-    <h2>Data Retention</h2>
-    <p>
-      Your data will be permanently deleted within <strong>30 days</strong> after your request.
-      Some data may be retained temporarily for legal or security purposes.
-    </p>
-  </div>
+<div class="card">
+<h2>Data Retention</h2>
+<p>
+All data will be permanently deleted within <strong>30 days</strong>.
+Some data may be retained temporarily for security, fraud prevention, or legal obligations.
+</p>
+</div>
 
-  <div class="card">
-    <h2>Request Deletion via Email</h2>
+<div class="card">
+<h2>Request Deletion via Email</h2>
 
-    <p>
-      If you cannot access the app, you can request account deletion by sending an email.
-    </p>
+<p>If you cannot access the app, you can request deletion by contacting us:</p>
 
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:trinitycreation.dev@gmail.com">
-        trinitycreation.dev@gmail.com
-      </a>
-    </p>
+<p>
+<strong>Email:</strong>
+<a href="mailto:trinitycreation.dev@gmail.com">
+trinitycreation.dev@gmail.com
+</a>
+</p>
 
-    <p style="margin-top:16px; font-size:14px;">
-      Please include your registered email or phone number for verification.
-    </p>
-  </div>
+<p style="font-size:14px;">
+Please include your registered phone number or account details for verification.
+</p>
+</div>
 
-  <div class="footer">
-    © <span id="year"></span> Flap • Contact:
-    <a href="mailto:trinitycreation.dev@gmail.com">trinitycreation.dev@gmail.com</a>
-  </div>
+<div class="footer">
+© <span id="year"></span> Flap • Contact:
+<a href="mailto:trinitycreation.dev@gmail.com">trinitycreation.dev@gmail.com</a>
+</div>
 
 </div>
 
