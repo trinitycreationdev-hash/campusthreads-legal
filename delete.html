@@ -1,176 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Flap – Data Deletion Request</title>
-<meta name="description" content="Request deletion of your Flap account and all associated data." />
+    <meta charset="UTF-8">
 
-<style>
-:root {
---bg: #0f0f0f;
---card: #161616;
---text: #ffffff;
---muted: #b3b3b3;
---danger: #ff4d4d;
---border: #2a2a2a;
-}
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
 
-* { box-sizing: border-box; }
+    <title>Beaver – Data Deletion Request</title>
 
-body {
-margin: 0;
-font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-background: var(--bg);
-color: var(--text);
-line-height: 1.6;
-}
+    <meta
+        name="description"
+        content="Request deletion of your Beaver account and associated personal data."
+    >
 
-.container {
-max-width: 800px;
-padding: 24px;
-margin: 0 auto;
-}
+    <style>
 
-.card {
-background: var(--card);
-border: 1px solid var(--border);
-border-radius: 16px;
-padding: 24px;
-margin-bottom: 20px;
-}
+        :root {
+            --bg: #0f0f0f;
+            --card: #161616;
+            --text: #ffffff;
+            --muted: #b3b3b3;
+            --primary: #1685ff;
+            --danger: #ff4d4d;
+            --border: #2a2a2a;
+            --notice-bg: #1a0f0f;
+            --blue-bg: #0d1a29;
+        }
 
-h1 { font-size: 28px; margin-top: 0; }
+        * {
+            box-sizing: border-box;
+        }
 
-p, li { color: var(--muted); }
+        body {
+            margin: 0;
+            font-family:
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
 
-.notice {
-border-left: 4px solid var(--danger);
-padding: 12px 16px;
-background: #1a0f0f;
-border-radius: 8px;
-margin: 16px 0 24px;
-}
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-.footer {
-margin-top: 24px;
-text-align: center;
-color: var(--muted);
-font-size: 14px;
-}
+        .container {
+            max-width: 850px;
+            padding: 24px;
+            margin: 0 auto;
+        }
 
-a { color: #ffffff; text-decoration: none; }
-a:hover { text-decoration: underline; }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 26px;
+            margin-bottom: 20px;
+        }
 
-ul, ol { padding-left: 20px; }
-</style>
+        .header {
+            text-align: center;
+            padding: 45px 24px 35px;
+        }
+
+        .logo {
+            width: 68px;
+            height: 68px;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: var(--primary);
+
+            color: white;
+
+            font-size: 36px;
+            font-weight: 900;
+
+            box-shadow:
+                0 10px 30px rgba(22, 133, 255, 0.25);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0 0 10px;
+            letter-spacing: -0.7px;
+        }
+
+        h2 {
+            font-size: 21px;
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        p,
+        li {
+            color: var(--muted);
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        .subtitle {
+            max-width: 650px;
+            margin: 0 auto;
+            color: var(--muted);
+        }
+
+        .notice {
+            border-left: 4px solid var(--danger);
+            padding: 14px 17px;
+
+            background: var(--notice-bg);
+
+            border-radius: 8px;
+
+            margin: 20px 0;
+        }
+
+        .notice strong {
+            color: var(--danger);
+        }
+
+        .blue-notice {
+            border-left: 4px solid var(--primary);
+            padding: 14px 17px;
+
+            background: var(--blue-bg);
+
+            border-radius: 8px;
+
+            margin: 20px 0;
+        }
+
+        .blue-notice strong {
+            color: #55aaff;
+        }
+
+        ol,
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .data-item {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            background: #131313;
+        }
+
+        .data-item h3 {
+            margin-top: 0;
+            color: white;
+        }
+
+        .data-item p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .email {
+            display: inline-block;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 28px;
+            padding-bottom: 30px;
+
+            text-align: center;
+
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 14px;
+            }
+
+            .card {
+                padding: 21px;
+            }
+
+            .header {
+                padding: 35px 15px 25px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
 <div class="container">
 
-<div class="card">
-<h1>Delete Your Account & Data</h1>
 
-<p>
-Flap allows you to delete your account and all associated data directly from within the app.
-This includes all content shared inside your private spaces.
-</p>
+    <!-- HEADER -->
 
-<div class="notice">
-<strong>Important:</strong> Once your account is deleted, your data will be permanently removed.
-This process may take up to <strong>30 days</strong>.
+    <div class="header">
+
+        <div class="logo">
+            B
+        </div>
+
+        <h1>
+            Delete Your Beaver Account &amp; Data
+        </h1>
+
+        <p class="subtitle">
+            You can request deletion of your Beaver account and
+            associated personal data at any time.
+        </p>
+
+    </div>
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="card">
+
+        <h2>
+            Account &amp; Data Deletion
+        </h2>
+
+        <p>
+            Beaver allows users to delete their account and associated
+            personal data through the application.
+        </p>
+
+        <p>
+            Beaver is built around <strong>Spaces</strong> and
+            <strong>Stacks</strong>. Your account may contain profile
+            information, participation in Spaces, messages, Stacks,
+            preferences, and other information associated with your
+            use of the service.
+        </p>
+
+        <div class="notice">
+
+            <strong>
+                Important:
+            </strong>
+
+            Once your account deletion request has been completed,
+            deleted data may not be recoverable.
+
+            Some information may need to be retained for a limited
+            period where required for legal, security, fraud-prevention,
+            or other legitimate purposes.
+
+        </div>
+
+        <p>
+            We recommend using the in-app deletion option whenever
+            possible because it provides the most direct way to
+            request deletion of your account.
+        </p>
+
+    </div>
+
+
+    <!-- IN APP DELETION -->
+
+    <div class="card">
+
+        <h2>
+            How to Delete Your Account in Beaver
+        </h2>
+
+        <ol>
+
+            <li>
+                Open the <strong>Beaver</strong> app.
+            </li>
+
+            <li>
+                Open your <strong>Profile</strong>.
+            </li>
+
+            <li>
+                Open <strong>Settings</strong>.
+            </li>
+
+            <li>
+                Select <strong>Delete Account</strong>.
+            </li>
+
+            <li>
+                Review the information presented to you.
+            </li>
+
+            <li>
+                Confirm your account deletion request.
+            </li>
+
+        </ol>
+
+        <div class="blue-notice">
+
+            <strong>
+                Deleting the Beaver application from your device
+                does not delete your Beaver account.
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- DATA THAT MAY BE DELETED -->
+
+    <div class="card">
+
+        <h2>
+            What Data May Be Deleted
+        </h2>
+
+        <p>
+            Depending on the information associated with your account,
+            account deletion may remove personal information and
+            account-associated content such as:
+        </p>
+
+
+        <div class="data-grid">
+
+
+            <div class="data-item">
+
+                <h3>
+                    Account Information
+                </h3>
+
+                <p>
+                    Information associated with your Beaver account,
+                    such as your account identifier, display name,
+                    username, and other profile information.
+                </p>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <h3>
+                    Profile Information
+                </h3>
+
+                <p>
+                    Profile image, profile details, and other
+                    information that you have added to your profile.
+                </p>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <h3>
+                    Messages &amp; Content
+                </h3>
+
+                <p>
+                    Messages, posts, images, links, and other content
+                    associated with your account, subject to applicable
+                    retention requirements.
+                </p>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <h3>
+                    Stacks
+                </h3>
+
+                <p>
+                    Stacks that you created, including Stack names,
+                    descriptions, and associated personal preferences
+                    or saved information.
+                </p>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <h3>
+                    Space Activity
+                </h3>
+
+                <p>
+                    Account-associated participation and activity
+                    within Spaces, where applicable.
+                </p>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <h3>
+                    Preferences
+                </h3>
+
+                <p>
+                    Personal settings, preferences, and information
+                    used to personalize your Beaver experience.
+                </p>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <h3>
+                    Notifications
+                </h3>
+
+                <p>
+                    Notification-related information associated with
+                    your account, including notification tokens where
+                    applicable.
+                </p>
+
+            </div>
+
+
+            <div class="data-item">
+
+                <h3>
+                    Account Connections
+                </h3>
+
+                <p>
+                    Account-associated relationships, memberships,
+                    follows, or other connections within Beaver,
+                    where applicable.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- STACK DATA -->
+
+    <div class="card">
+
+        <h2>
+            What Happens to Your Stacks?
+        </h2>
+
+        <p>
+            Stacks are a core part of Beaver and are designed to help
+            users organize information around their personal interests.
+        </p>
+
+        <p>
+            When you delete your account, personal Stack information
+            associated with your account may be deleted or anonymized
+            as part of the account deletion process, subject to
+            applicable legal and operational requirements.
+        </p>
+
+        <p>
+            This may include Stack names, descriptions, preferences,
+            and account-associated information.
+        </p>
+
+    </div>
+
+
+    <!-- SPACE DATA -->
+
+    <div class="card">
+
+        <h2>
+            What Happens to Spaces?
+        </h2>
+
+        <p>
+            Spaces are community areas where users communicate and
+            share information.
+        </p>
+
+        <p>
+            Deleting your account does not necessarily mean that an
+            entire Space will be deleted, particularly when other
+            members depend on that Space.
+        </p>
+
+        <p>
+            Where your account has participated in a shared Space,
+            some community information may need to remain available
+            to other members in an appropriate form.
+        </p>
+
+        <p>
+            We may remove, anonymize, or otherwise disassociate
+            account-specific information where appropriate and
+            technically feasible.
+        </p>
+
+    </div>
+
+
+    <!-- SHARED CONTENT -->
+
+    <div class="card">
+
+        <h2>
+            Content Shared With Other Users
+        </h2>
+
+        <p>
+            Beaver is a community platform, which means that some
+            content may have been shared with other users through
+            Spaces.
+        </p>
+
+        <p>
+            Depending on how the content was shared and how the
+            service operates, some community content may need to
+            remain available as part of the shared history of a Space.
+        </p>
+
+        <p>
+            Where appropriate, information may be removed,
+            anonymized, or disassociated from the deleted account.
+        </p>
+
+    </div>
+
+
+    <!-- RETENTION -->
+
+    <div class="card">
+
+        <h2>
+            Data Retention
+        </h2>
+
+        <p>
+            We aim to process account deletion requests within
+            <strong>30 days</strong>.
+        </p>
+
+        <p>
+            Some information may remain temporarily in secure backups
+            or systems until those systems are updated or overwritten.
+        </p>
+
+        <p>
+            Certain information may also be retained where necessary
+            to comply with legal obligations, resolve disputes,
+            enforce agreements, prevent fraud or abuse, maintain
+            security, or protect the rights and safety of users and
+            the service.
+        </p>
+
+        <p>
+            When retained data is no longer required for these
+            purposes, it will be deleted or appropriately handled in
+            accordance with our applicable policies.
+        </p>
+
+    </div>
+
+
+    <!-- EMAIL REQUEST -->
+
+    <div class="card">
+
+        <h2>
+            Request Deletion by Email
+        </h2>
+
+        <p>
+            If you cannot access your Beaver account or cannot use
+            the in-app deletion option, you can contact us by email
+            to request account deletion.
+        </p>
+
+        <p>
+
+            <strong>
+                Email:
+            </strong>
+
+            <br>
+
+            <a
+                class="email"
+                href="mailto:trinitycreation.dev@gmail.com?subject=Beaver%20Account%20Deletion%20Request"
+            >
+                trinitycreation.dev@gmail.com
+            </a>
+
+        </p>
+
+        <p>
+            Please include enough information for us to identify your
+            account, such as your registered email address, username,
+            or other relevant account information.
+        </p>
+
+        <div class="blue-notice">
+
+            <strong>
+                For your security, we may need to verify that you are
+                the account owner before processing an email-based
+                deletion request.
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHAT IS NOT DELETED -->
+
+    <div class="card">
+
+        <h2>
+            Information That May Be Retained
+        </h2>
+
+        <p>
+            Account deletion does not necessarily require the immediate
+            deletion of every piece of information from every system.
+        </p>
+
+        <p>
+            Information may be retained for a limited period when
+            reasonably necessary for:
+        </p>
+
+        <ul>
+
+            <li>
+                Compliance with applicable laws and legal obligations.
+            </li>
+
+            <li>
+                Security and fraud prevention.
+            </li>
+
+            <li>
+                Prevention and investigation of abuse.
+            </li>
+
+            <li>
+                Resolving disputes or enforcing legal rights.
+            </li>
+
+            <li>
+                Maintaining system security and integrity.
+            </li>
+
+            <li>
+                Secure backup and disaster-recovery processes.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT NOTES -->
+
+    <div class="card">
+
+        <h2>
+            Important Notes
+        </h2>
+
+        <ul>
+
+            <li>
+                Deleting the Beaver app from your phone does not
+                delete your account.
+            </li>
+
+            <li>
+                Account deletion may permanently remove information
+                associated with your Beaver account.
+            </li>
+
+            <li>
+                Deleted account data may not be recoverable.
+            </li>
+
+            <li>
+                Shared community content may be treated differently
+                from private account information.
+            </li>
+
+            <li>
+                Some information may be retained when required for
+                legal, security, fraud-prevention, or other legitimate
+                purposes.
+            </li>
+
+            <li>
+                Email deletion requests may require account ownership
+                verification.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <div class="card">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            If you have questions about account deletion or your
+            personal data, please contact:
+        </p>
+
+        <p>
+
+            <strong>
+                Trinity Creation
+            </strong>
+
+            <br>
+
+            <a
+                class="email"
+                href="mailto:trinitycreation.dev@gmail.com"
+            >
+                trinitycreation.dev@gmail.com
+            </a>
+
+        </p>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © <span id="year"></span>
+        Beaver · Trinity Creation
+
+        <br>
+
+        Contact:
+        <a href="mailto:trinitycreation.dev@gmail.com">
+            trinitycreation.dev@gmail.com
+        </a>
+
+    </div>
+
+
 </div>
 
-<p>
-We recommend using the in-app option for faster and secure deletion.
-</p>
-</div>
-
-<div class="card">
-<h2>How to Delete Your Account (In-App)</h2>
-<ol>
-<li>Open the Flap app</li>
-<li>Go to your <strong>Profile</strong></li>
-<li>Open <strong>Settings</strong></li>
-<li>Tap <strong>Delete Account</strong></li>
-<li>Confirm your request</li>
-</ol>
-</div>
-
-<div class="card">
-<h2>What Data Will Be Deleted</h2>
-<ul>
-<li>Your account information (name, profile data)</li>
-<li>Your profile image</li>
-<li>All content you created (images, notes, files, polls, to-do items)</li>
-<li>Spaces you created or joined</li>
-<li>Your interactions (votes, completed tasks, views)</li>
-<li>Connections with other users (space membership)</li>
-<li>Notification tokens (FCM)</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>What May Not Be Deleted Immediately</h2>
-<ul>
-<li>Data temporarily stored in secure backups (deleted within 30 days)</li>
-<li>Content shared in spaces may remain visible to other members if it is part of shared activity history</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Alternative: Request via Email</h2>
-
-<p>
-If you cannot access your account, you can request deletion by contacting us:
-</p>
-
-<p>
-<strong>Email:</strong>
-<a href="mailto:trinitycreation.dev@gmail.com">
-trinitycreation.dev@gmail.com
-</a>
-</p>
-
-<p style="font-size:14px;">
-Please include:
-</p>
-
-<ul>
-<li>Your registered account name (if known)</li>
-<li>Any relevant details to help identify your account</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Data Retention</h2>
-<p>
-We delete your data within <strong>30 days</strong> of your request.
-Some data may be retained temporarily for legal, security, or fraud prevention purposes.
-</p>
-</div>
-
-<div class="card">
-<h2>Important Notes</h2>
-<ul>
-<li>Deleting your account removes your access to all spaces</li>
-<li>Content shared with others may remain visible to them within shared spaces</li>
-<li>Deleting the app alone does not delete your account or data</li>
-</ul>
-</div>
-
-<div class="footer">
-© <span id="year"></span> Flap • Contact:
-<a href="mailto:trinitycreation.dev@gmail.com">trinitycreation.dev@gmail.com</a>
-</div>
-
-</div>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
 </script>
 
+
 </body>
+
 </html>
