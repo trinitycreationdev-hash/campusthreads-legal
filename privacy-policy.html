@@ -1,223 +1,863 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - Flap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-font-family: Arial, Helvetica, sans-serif;
-line-height:1.6;
-margin:0;
-padding:0;
-background:#f7f7f7;
-color:#222;
-}
-.container{
-max-width:900px;
-margin:0 auto;
-padding:24px;
-background:#fff;
-}
-h1,h2,h3{ color:#111; }
-.updated{
-color:#666;
-font-size:14px;
-margin-bottom:24px;
-}
-ul{ padding-left:20px; }
-li{ margin-bottom:6px; }
-hr{ margin:32px 0; }
-.footer{
-margin-top:40px;
-font-size:14px;
-color:#555;
-}
-</style>
+    <title>Beaver - Privacy Policy</title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for Beaver - Spaces & Stacks."
+    >
+
+    <style>
+        :root {
+            --primary: #1685ff;
+            --primary-dark: #006fe6;
+            --text: #1b1d21;
+            --muted: #646a73;
+            --background: #f7f9fc;
+            --card: #ffffff;
+            --border: #e5e8ed;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            line-height: 1.7;
+        }
+
+        .header {
+            background: #090a0c;
+            color: white;
+            padding: 56px 20px;
+            text-align: center;
+        }
+
+        .brand {
+            margin: 0;
+            color: #ffffff;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+        }
+
+        .brand span {
+            color: var(--primary);
+        }
+
+        .header p {
+            max-width: 700px;
+            margin: 12px auto 0;
+            color: #b8bec8;
+            font-size: 16px;
+        }
+
+        .container {
+            width: min(920px, calc(100% - 32px));
+            margin: 36px auto 60px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 34px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 0 0 12px;
+            letter-spacing: -0.7px;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin-top: 0;
+            margin-bottom: 14px;
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 0 0 14px;
+        }
+
+        ul {
+            margin-top: 8px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            font-size: 17px;
+            color: var(--muted);
+        }
+
+        .notice {
+            background: #eef6ff;
+            border: 1px solid #cfe6ff;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-top: 20px;
+        }
+
+        .notice strong {
+            color: #075ebd;
+        }
+
+        .toc {
+            background: #fbfcfe;
+        }
+
+        .toc ol {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .date {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px 50px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .contact-box {
+            background: #090a0c;
+            color: white;
+            border-radius: 14px;
+            padding: 24px;
+        }
+
+        .contact-box a {
+            color: #5ab0ff;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 42px 18px;
+            }
+
+            .brand {
+                font-size: 36px;
+            }
+
+            .container {
+                width: min(100% - 20px, 920px);
+                margin-top: 20px;
+            }
+
+            .card {
+                padding: 24px 20px;
+                border-radius: 14px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+<header class="header">
+    <h1 class="brand">Bea<span>v</span>er</h1>
+    <p>
+        Privacy Policy for Beaver: Spaces &amp; Stacks
+    </p>
+</header>
 
-<h1>Privacy Policy for Flap</h1>
-<div class="updated">Last updated: 29 April 2026</div>
+<main class="container">
 
-<p>
-Flap ("we", "our", or "us") respects your privacy and is committed to protecting your information.
-This Privacy Policy explains how we collect, use, and safeguard your data when you use the Flap mobile application.
-</p>
+    <section class="card">
+        <h1>Privacy Policy</h1>
 
-<p>
-Flap is a private app that allows users to create shared spaces with their friends to share images, notes, files, polls, and tasks.
-</p>
+        <p class="date">
+            Effective Date: [DATE]
+        </p>
 
-<hr>
+        <p class="intro">
+            This Privacy Policy explains how Beaver ("Beaver", "we", "us",
+            or "our") collects, uses, stores, shares, and protects information
+            when you use the Beaver mobile application and related services.
+        </p>
 
-<h2>1. Eligibility</h2>
-<ul>
-<li>You must be at least 13 years old to use Flap.</li>
-<li>We do not knowingly collect data from children under 13.</li>
-</ul>
+        <div class="notice">
+            <strong>Please read this policy carefully.</strong>
+            By using Beaver, you acknowledge that you have read and understood
+            this Privacy Policy.
+        </div>
+    </section>
 
-<hr>
 
-<h2>2. Information We Collect</h2>
+    <section class="card toc">
+        <h2>Contents</h2>
 
-<h3>a) Information You Provide</h3>
-<ul>
-<li>Your name or username</li>
-<li>Profile image (optional)</li>
-<li>Content you create within spaces (images, notes, files, polls, to-do items)</li>
-<li>Spaces you create or join</li>
-<li>Interactions (votes, completions, views, etc.)</li>
-</ul>
+        <ol>
+            <li><a href="#information">Information We Collect</a></li>
+            <li><a href="#account">Account Information</a></li>
+            <li><a href="#content">Content You Provide</a></li>
+            <li><a href="#usage">Information Collected Automatically</a></li>
+            <li><a href="#notifications">Notifications</a></li>
+            <li><a href="#how-we-use">How We Use Information</a></li>
+            <li><a href="#public-content">Public and Community Content</a></li>
+            <li><a href="#sharing">How We Share Information</a></li>
+            <li><a href="#firebase">Third-Party Services</a></li>
+            <li><a href="#links">Third-Party Links</a></li>
+            <li><a href="#retention">Data Retention</a></li>
+            <li><a href="#security">Data Security</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#rights">Your Choices and Rights</a></li>
+            <li><a href="#delete">Account and Data Deletion</a></li>
+            <li><a href="#international">International Data Transfers</a></li>
+            <li><a href="#changes">Changes to This Privacy Policy</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ol>
+    </section>
 
-<h3>b) Automatically Collected Information</h3>
-<ul>
-<li>Device type and operating system</li>
-<li>App usage data (for performance improvements)</li>
-<li>Crash logs and diagnostics</li>
-<li>Push notification token (for updates and activity alerts)</li>
-</ul>
 
-<hr>
+    <section class="card" id="information">
+        <h2>1. Information We Collect</h2>
 
-<h2>3. How We Use Your Information</h2>
+        <p>
+            Depending on how you use Beaver, we may collect the following
+            categories of information:
+        </p>
 
-<ul>
-<li>Enable you to create and use private shared spaces</li>
-<li>Allow you to share and view content within your spaces</li>
-<li>Show your content to members of your spaces</li>
-<li>Enable collaboration (notes, polls, tasks, files)</li>
-<li>Send notifications related to activity in your spaces</li>
-<li>Improve app performance and fix issues</li>
-<li>Maintain safety and prevent misuse</li>
-</ul>
+        <ul>
+            <li>
+                Account and authentication information.
+            </li>
 
-<p><strong>We do not sell your personal data.</strong></p>
+            <li>
+                Profile information that you choose to provide.
+            </li>
 
-<hr>
+            <li>
+                Content that you create, upload, post, or share.
+            </li>
 
-<h2>4. How Data Is Stored</h2>
+            <li>
+                Information about Spaces and Stacks that you create or join.
+            </li>
 
-<p>We use secure cloud services including:</p>
+            <li>
+                Information associated with your interactions with community
+                content.
+            </li>
 
-<ul>
-<li><strong>Firebase Firestore</strong> (user data and content)</li>
-<li><strong>Firebase Storage</strong> (images and files)</li>
-<li><strong>Firebase Cloud Messaging</strong> (notifications)</li>
-</ul>
+            <li>
+                Device and technical information required to operate and
+                secure the service.
+            </li>
 
-<p>
-Your data is stored securely using industry-standard practices.
-</p>
+            <li>
+                Information required to deliver push notifications when you
+                enable notifications.
+            </li>
+        </ul>
 
-<hr>
+        <p>
+            We only request information that is reasonably necessary for
+            providing, maintaining, securing, and improving Beaver.
+        </p>
+    </section>
 
-<h2>5. How Sharing Works</h2>
 
-<ul>
-<li>Your content is visible only to members of the space.</li>
-<li>Spaces are private and accessible only by invited users.</li>
-<li>There is no public feed or global visibility.</li>
-</ul>
+    <section class="card" id="account">
+        <h2>2. Account Information</h2>
 
-<hr>
+        <p>
+            When you create or use a Beaver account, we may process information
+            associated with your account, such as:
+        </p>
 
-<h2>6. Data Retention</h2>
+        <ul>
+            <li>Email address.</li>
+            <li>Authentication information.</li>
+            <li>Display name or username.</li>
+            <li>Profile photo, if you choose to provide one.</li>
+            <li>Other profile information that you voluntarily submit.</li>
+        </ul>
 
-<ul>
-<li>Your content is stored as long as your account or space exists.</li>
-<li>Deleted content may remain temporarily in backups.</li>
-</ul>
+        <p>
+            Authentication services may be provided through Firebase
+            Authentication or other authentication infrastructure used by
+            Beaver.
+        </p>
+    </section>
 
-<hr>
 
-<h2>7. Account and Data Deletion</h2>
+    <section class="card" id="content">
+        <h2>3. Content You Provide</h2>
 
-<ul>
-<li>You can request deletion of your account and associated data.</li>
-<li>This includes your profile, spaces, and content.</li>
-<li>Some data may remain temporarily in backups for system reliability.</li>
-</ul>
+        <p>
+            Beaver allows users to participate in communities and organize
+            information through Spaces and Stacks.
+        </p>
 
-<hr>
+        <p>
+            Depending on the features you use, we may process content such as:
+        </p>
 
-<h2>8. Your Rights</h2>
+        <ul>
+            <li>Messages and posts.</li>
+            <li>Images or other media that you upload.</li>
+            <li>Links or URLs that you share.</li>
+            <li>Space names and descriptions.</li>
+            <li>Stack names and descriptions.</li>
+            <li>Profile information.</li>
+            <li>Reports, feedback, and support requests.</li>
+        </ul>
 
-<ul>
-<li>Access your data</li>
-<li>Update your information</li>
-<li>Request deletion</li>
-<li>Contact us for any concerns</li>
-</ul>
+        <p>
+            You are responsible for ensuring that the content you submit to
+            Beaver does not violate applicable law or the rights of others.
+        </p>
+    </section>
 
-<hr>
 
-<h2>9. Security</h2>
+    <section class="card" id="usage">
+        <h2>4. Information Collected Automatically</h2>
 
-<ul>
-<li>Secure data transmission (HTTPS)</li>
-<li>Restricted access to systems</li>
-<li>Regular monitoring and updates</li>
-</ul>
+        <p>
+            When you use Beaver, certain technical information may be
+            processed automatically to operate and protect the service.
+        </p>
 
-<p>
-While we take strong precautions, no system is completely secure.
-</p>
+        <p>
+            Depending on the configuration of the application and its
+            underlying services, this may include:
+        </p>
 
-<hr>
+        <ul>
+            <li>Device type and operating system.</li>
+            <li>Application version.</li>
+            <li>Basic diagnostic information.</li>
+            <li>Crash and error information.</li>
+            <li>Network and connectivity information.</li>
+            <li>Identifiers required by third-party service providers.</li>
+        </ul>
 
-<h2>10. Third-Party Services</h2>
+        <p>
+            We use this information primarily for security, troubleshooting,
+            reliability, and improving the performance of Beaver.
+        </p>
+    </section>
 
-<p>
-Flap uses services such as Google Firebase to operate the app.
-These services may process data according to their own policies.
-</p>
 
-<hr>
+    <section class="card" id="notifications">
+        <h2>5. Notifications</h2>
 
-<h2>11. What We Do Not Do</h2>
+        <p>
+            Beaver may use push notification technology to send you relevant
+            notifications about your account, Spaces, Stacks, community
+            activity, or other features of the service.
+        </p>
 
-<ul>
-<li>We do not sell your data</li>
-<li>We do not show ads (currently)</li>
-<li>We do not track you across other apps</li>
-<li>We do not collect financial information</li>
-<li>We do not collect precise location data</li>
-</ul>
+        <p>
+            Push notifications may use a device or application messaging
+            token provided by Firebase Cloud Messaging (FCM).
+        </p>
 
-<hr>
+        <p>
+            You can control notifications through the notification settings
+            provided by your device and, where available, through Beaver's
+            settings.
+        </p>
+    </section>
 
-<h2>12. Changes to This Policy</h2>
 
-<p>
-We may update this Privacy Policy from time to time.
-Changes will be posted on this page.
-</p>
+    <section class="card" id="how-we-use">
+        <h2>6. How We Use Information</h2>
 
-<hr>
+        <p>
+            We may use information for the following purposes:
+        </p>
 
-<h2>13. Jurisdiction</h2>
+        <ul>
+            <li>
+                To create and maintain your Beaver account.
+            </li>
 
-<p>This policy is governed by the laws of India.</p>
+            <li>
+                To authenticate users and protect accounts.
+            </li>
 
-<hr>
+            <li>
+                To provide Spaces, Stacks, messaging, profiles, and other
+                application features.
+            </li>
 
-<h2>14. Contact Us</h2>
+            <li>
+                To organize and surface content according to features you
+                choose to use.
+            </li>
 
-<p>
-<strong>Email:</strong> trinitycreation.dev@gmail.com<br>
-Response time: 2–7 business days
-</p>
+            <li>
+                To deliver notifications.
+            </li>
 
-<div class="footer">
-<p>© Flap. All rights reserved.</p>
-</div>
+            <li>
+                To detect, investigate, and prevent spam, abuse, fraud, and
+                other harmful activity.
+            </li>
 
-</div>
+            <li>
+                To respond to feedback, support requests, and reports.
+            </li>
+
+            <li>
+                To diagnose errors and improve application performance.
+            </li>
+
+            <li>
+                To maintain the security and integrity of our services.
+            </li>
+
+            <li>
+                To comply with legal obligations and enforce our terms and
+                policies.
+            </li>
+        </ul>
+    </section>
+
+
+    <section class="card" id="public-content">
+        <h2>7. Public and Community Content</h2>
+
+        <p>
+            Beaver is a community-based application. Content that you
+            intentionally publish within a Space or otherwise make available
+            to other users may be visible to members of that Space or other
+            users depending on the applicable feature and visibility settings.
+        </p>
+
+        <p>
+            You should therefore avoid posting sensitive personal information,
+            passwords, financial information, government identification
+            numbers, private contact information, or other information that
+            you do not want other users to see.
+        </p>
+
+        <p>
+            Please remember that information shared with other users may be
+            copied, saved, or shared by those users outside Beaver.
+        </p>
+    </section>
+
+
+    <section class="card" id="sharing">
+        <h2>8. How We Share Information</h2>
+
+        <p>
+            We do not sell your personal information.
+        </p>
+
+        <p>
+            We may share or disclose information in limited circumstances,
+            including:
+        </p>
+
+        <h3>Service Providers</h3>
+
+        <p>
+            We may use trusted third-party providers that process information
+            on our behalf to provide infrastructure, authentication, database
+            storage, messaging, notifications, security, hosting, analytics,
+            crash reporting, or other services required to operate Beaver.
+        </p>
+
+        <h3>Legal Requirements</h3>
+
+        <p>
+            We may disclose information when reasonably necessary to comply
+            with applicable law, legal process, court orders, governmental
+            requests, or to protect the rights, safety, and security of
+            Beaver, our users, or others.
+        </p>
+
+        <h3>Business Transfers</h3>
+
+        <p>
+            If Beaver or substantially all of its assets are involved in a
+            merger, acquisition, financing, reorganization, sale, or similar
+            transaction, information may be transferred as part of that
+            transaction, subject to applicable law.
+        </p>
+    </section>
+
+
+    <section class="card" id="firebase">
+        <h2>9. Third-Party Services</h2>
+
+        <p>
+            Beaver uses third-party services to provide certain functionality.
+            These providers may process information according to their own
+            privacy policies and contractual obligations.
+        </p>
+
+        <h3>Firebase</h3>
+
+        <p>
+            Beaver may use Firebase services provided by Google, including
+            Firebase Authentication, Cloud Firestore, Firebase Cloud
+            Messaging, and other Firebase services required by the application.
+        </p>
+
+        <p>
+            These services may process information such as authentication
+            details, application data, device information, diagnostic
+            information, and notification-related identifiers, depending on
+            the Firebase services enabled in Beaver.
+        </p>
+
+        <p>
+            More information about Google's privacy practices is available at:
+        </p>
+
+        <p>
+            <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Google Privacy Policy
+            </a>
+        </p>
+
+        <p>
+            More information about Firebase privacy and security is available
+            through Google's Firebase documentation and policies.
+        </p>
+    </section>
+
+
+    <section class="card" id="links">
+        <h2>10. Third-Party Links</h2>
+
+        <p>
+            Beaver may allow users to share or access links to websites,
+            services, or other content operated by third parties.
+        </p>
+
+        <p>
+            We do not control the privacy practices, security, or content of
+            third-party websites. When you leave Beaver and visit an external
+            website, that website's privacy policy applies.
+        </p>
+
+        <p>
+            We encourage you to review the privacy policy of any third-party
+            service you use.
+        </p>
+    </section>
+
+
+    <section class="card" id="retention">
+        <h2>11. Data Retention</h2>
+
+        <p>
+            We retain information for as long as reasonably necessary to
+            provide Beaver's services, maintain security, comply with legal
+            obligations, resolve disputes, enforce agreements, and protect
+            our legitimate interests.
+        </p>
+
+        <p>
+            The retention period may vary depending on the type of information
+            and the reason it was collected.
+        </p>
+
+        <p>
+            When information is no longer reasonably required, we may delete,
+            anonymize, or otherwise securely dispose of it, subject to legal
+            and operational requirements.
+        </p>
+    </section>
+
+
+    <section class="card" id="security">
+        <h2>12. Data Security</h2>
+
+        <p>
+            We take reasonable technical and organizational measures designed
+            to protect information against unauthorized access, alteration,
+            disclosure, loss, or destruction.
+        </p>
+
+        <p>
+            However, no method of electronic transmission or storage is
+            completely secure. Therefore, we cannot guarantee absolute
+            security of information.
+        </p>
+
+        <p>
+            You are also responsible for protecting your account credentials
+            and for notifying us if you believe your account has been
+            compromised.
+        </p>
+    </section>
+
+
+    <section class="card" id="children">
+        <h2>13. Children's Privacy</h2>
+
+        <p>
+            Beaver is not intended for children below the minimum age required
+            to use the service in their jurisdiction.
+        </p>
+
+        <p>
+            We do not knowingly collect personal information from children
+            where such collection is prohibited by applicable law.
+        </p>
+
+        <p>
+            If you believe that a child has provided personal information to
+            Beaver in violation of applicable requirements, please contact us.
+            If we learn that we have collected such information improperly, we
+            will take reasonable steps to delete it.
+        </p>
+    </section>
+
+
+    <section class="card" id="rights">
+        <h2>14. Your Choices and Rights</h2>
+
+        <p>
+            Depending on your location and applicable law, you may have
+            certain rights regarding your personal information.
+        </p>
+
+        <p>
+            These rights may include:
+        </p>
+
+        <ul>
+            <li>
+                Requesting access to personal information we hold about you.
+            </li>
+
+            <li>
+                Requesting correction of inaccurate information.
+            </li>
+
+            <li>
+                Requesting deletion of your account or personal information.
+            </li>
+
+            <li>
+                Requesting restriction of certain processing.
+            </li>
+
+            <li>
+                Objecting to certain processing where applicable.
+            </li>
+
+            <li>
+                Requesting a copy of certain information in a portable format
+                where required by law.
+            </li>
+
+            <li>
+                Withdrawing consent where processing is based on consent.
+            </li>
+        </ul>
+
+        <p>
+            Some rights may be subject to legal exceptions or limitations.
+        </p>
+
+        <p>
+            To exercise an applicable privacy right, contact us using the
+            information provided below.
+        </p>
+    </section>
+
+
+    <section class="card" id="delete">
+        <h2>15. Account and Data Deletion</h2>
+
+        <p>
+            You may request deletion of your Beaver account and associated
+            personal information.
+        </p>
+
+        <p>
+            If Beaver provides an in-app account deletion feature, you may
+            use that feature to submit your deletion request.
+        </p>
+
+        <p>
+            Alternatively, you may contact us at:
+        </p>
+
+        <p>
+            <a href="mailto:[PRIVACY EMAIL]">
+                [PRIVACY EMAIL]
+            </a>
+        </p>
+
+        <p>
+            When processing a deletion request, we may need to verify the
+            request and account ownership to prevent unauthorized deletion.
+        </p>
+
+        <p>
+            Some information may need to be retained where required by law,
+            necessary for security, fraud prevention, dispute resolution, or
+            other legitimate purposes.
+        </p>
+    </section>
+
+
+    <section class="card" id="international">
+        <h2>16. International Data Transfers</h2>
+
+        <p>
+            Depending on the services and infrastructure used to operate
+            Beaver, your information may be processed or stored in countries
+            other than the country where you live.
+        </p>
+
+        <p>
+            Where required by applicable law, we take appropriate measures
+            designed to provide suitable protection for personal information
+            transferred across borders.
+        </p>
+    </section>
+
+
+    <section class="card" id="changes">
+        <h2>17. Changes to This Privacy Policy</h2>
+
+        <p>
+            We may update this Privacy Policy from time to time to reflect
+            changes to Beaver, our practices, legal requirements, or other
+            operational considerations.
+        </p>
+
+        <p>
+            When we make changes, we will update the "Effective Date" shown at
+            the beginning of this policy.
+        </p>
+
+        <p>
+            If a change is material and applicable law requires additional
+            notice, we will provide appropriate notice through Beaver or other
+            reasonable means.
+        </p>
+    </section>
+
+
+    <section class="card" id="contact">
+        <h2>18. Contact Us</h2>
+
+        <p>
+            If you have questions, concerns, requests, or complaints regarding
+            this Privacy Policy or Beaver's privacy practices, please contact
+            us using the information below.
+        </p>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>Beaver</strong>
+            </p>
+
+            <p>
+                Operated by: <strong>Trinity Creation</strong>
+            </p>
+
+            <p>
+                Privacy Email:
+                <a href="mailto:[PRIVACY EMAIL]">
+                    [PRIVACY EMAIL]
+                </a>
+            </p>
+
+            <p>
+                Contact:
+                <a href="[CONTACT URL]">
+                    [CONTACT URL]
+                </a>
+            </p>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <p>
+        &copy; <span id="year"></span> Trinity Creation. All rights reserved.
+    </p>
+
+    <p>
+        Beaver &bull; Spaces &amp; Stacks
+    </p>
+</footer>
+
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
 
 </body>
 </html>
