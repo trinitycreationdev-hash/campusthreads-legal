@@ -1,160 +1,1109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Flap – Child Safety & CSAE Policy</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta name="description" content="Flap policies to prevent child sexual abuse and exploitation (CSAE).">
+    <title>Beaver - Child Safety Standards</title>
 
-<style>
-body{
-font-family: Arial, Helvetica, sans-serif;
-background:#0f0f0f;
-color:#ffffff;
-line-height:1.7;
-padding:24px;
-max-width:900px;
-margin:auto;
-}
+    <meta
+        name="description"
+        content="Beaver Child Safety Standards and policies for protecting children and preventing child sexual abuse and exploitation."
+    >
 
-h1,h2{ color:#ffffff; }
+    <style>
+        :root {
+            --primary: #1685ff;
+            --primary-dark: #006fe6;
+            --text: #17191d;
+            --muted: #646b75;
+            --background: #f7f9fc;
+            --card: #ffffff;
+            --border: #e5e8ed;
+            --dark: #090a0c;
+            --danger: #d92d20;
+            --danger-bg: #fff1f0;
+            --success: #087443;
+            --success-bg: #ecfdf3;
+        }
 
-.box{
-background:#161616;
-padding:18px;
-border-radius:10px;
-margin-bottom:20px;
-border:1px solid #2a2a2a;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-a{
-color:#ffffff;
-text-decoration:none;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-a:hover{ text-decoration:underline; }
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            line-height: 1.7;
+        }
 
-.footer{
-margin-top:40px;
-font-size:13px;
-color:#aaa;
-}
-</style>
+        /* HERO */
+
+        .hero {
+            background: var(--dark);
+            color: white;
+            padding: 70px 20px 80px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            border-radius: 19px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: 900;
+            box-shadow:
+                0 12px 35px rgba(22, 133, 255, 0.30);
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 42px;
+            font-weight: 850;
+            letter-spacing: -1.5px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 14px auto 0;
+            color: #b9c0ca;
+            font-size: 17px;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: min(920px, calc(100% - 32px));
+            margin: -30px auto 70px;
+        }
+
+        /* CARD */
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 36px;
+            margin-bottom: 20px;
+            box-shadow:
+                0 5px 25px rgba(0, 0, 0, 0.035);
+        }
+
+        h2 {
+            margin: 0 0 15px;
+            font-size: 26px;
+            letter-spacing: -0.5px;
+        }
+
+        h3 {
+            margin: 25px 0 8px;
+            font-size: 19px;
+        }
+
+        p {
+            margin: 0 0 15px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .date {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* IMPORTANT NOTICE */
+
+        .important {
+            background: var(--danger-bg);
+            border: 1px solid #ffc9c5;
+            border-radius: 14px;
+            padding: 22px;
+            margin-top: 22px;
+        }
+
+        .important strong {
+            color: var(--danger);
+        }
+
+        /* BLUE NOTICE */
+
+        .blue-notice {
+            background: #eef6ff;
+            border: 1px solid #cfe6ff;
+            border-radius: 14px;
+            padding: 22px;
+            margin-top: 20px;
+        }
+
+        .blue-notice strong {
+            color: #075ebd;
+        }
+
+        /* POLICY ITEMS */
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .policy-item {
+            background: #fbfcfe;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 23px;
+        }
+
+        .policy-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: #eaf4ff;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 13px;
+        }
+
+        .policy-item h3 {
+            margin-top: 0;
+        }
+
+        .policy-item p {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        /* ZERO TOLERANCE */
+
+        .zero {
+            background: #090a0c;
+            color: white;
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .zero h2 {
+            color: white;
+        }
+
+        .zero p {
+            color: #c4c9d1;
+        }
+
+        .zero ul {
+            color: #d8dce2;
+        }
+
+        .zero strong {
+            color: #5ab0ff;
+        }
+
+        /* REPORT BOX */
+
+        .report-box {
+            background: var(--success-bg);
+            border: 1px solid #abefc6;
+            border-radius: 15px;
+            padding: 24px;
+            margin-top: 22px;
+        }
+
+        .report-box strong {
+            color: var(--success);
+        }
+
+        .email {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        /* STEPS */
+
+        .steps {
+            margin-top: 24px;
+        }
+
+        .step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .step-number {
+            flex: 0 0 38px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+        }
+
+        .step-content h3 {
+            margin: 0 0 4px;
+        }
+
+        .step-content p {
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 35px 20px 55px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--text);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding: 55px 18px 70px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .container {
+                width: min(100% - 20px, 920px);
+                margin-top: -25px;
+            }
+
+            .card {
+                padding: 26px 20px;
+                border-radius: 15px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+            .policy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .zero {
+                padding: 25px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Child Safety & CSAE Policy</h1>
 
-<div class="box">
-<p>
-Flap is committed to protecting children and preventing child sexual abuse and exploitation (CSAE).
-We have zero tolerance for any content or behavior that harms, exploits, or endangers minors.
-</p>
+<!-- HERO -->
 
-<p>
-Flap is a private app where users create shared spaces with friends to share images, notes, files, polls, and tasks.
-All content shared on Flap must follow strict safety standards.
-</p>
-</div>
+<header class="hero">
 
-<h2>Prohibited Content and Behavior</h2>
+    <div class="logo">
+        B
+    </div>
 
-<div class="box">
-<ul>
-<li>Any form of child sexual abuse material (CSAM)</li>
-<li>Sexual or suggestive content involving minors</li>
-<li>Content that exploits, harms, or endangers children</li>
-<li>Grooming behavior or attempts to contact minors for exploitation</li>
-<li>Sharing, requesting, or promoting inappropriate content involving minors</li>
-</ul>
-</div>
+    <h1>Beaver Child Safety</h1>
 
-<h2>Enforcement Actions</h2>
+    <p>
+        Our commitment to protecting children and maintaining a safe
+        community environment.
+    </p>
 
-<div class="box">
-<p>
-We actively review and respond to violations of these policies.
-</p>
+</header>
 
-<ul>
-<li>Immediate removal of violating content</li>
-<li>Temporary or permanent suspension of user accounts</li>
-<li>Reporting to law enforcement authorities when required</li>
-</ul>
-</div>
 
-<h2>Reporting Safety Concerns</h2>
+<main class="container">
 
-<div class="box">
-<p>
-If you encounter any content or behavior that may violate child safety standards, please report it immediately.
-</p>
 
-<ul>
-<li>Use in-app reporting features</li>
-<li>Contact us directly via email</li>
-<li>Provide relevant details such as screenshots or user information if possible</li>
-</ul>
+    <!-- INTRODUCTION -->
 
-<p>
-All reports are reviewed with high priority.
-</p>
-</div>
+    <section class="card">
 
-<h2>Platform Safety Measures</h2>
+        <h2>
+            Child Safety Standards
+        </h2>
 
-<div class="box">
-<p>
-Flap is designed with safety and privacy in mind:
-</p>
+        <p class="date">
+            Effective Date: September 1, 2026
+        </p>
 
-<ul>
-<li>No public feed or global content discovery</li>
-<li>Content is shared only within private spaces</li>
-<li>Only invited members can access a space</li>
-<li>Users control who they interact with</li>
-<li>Ability to report harmful or unsafe content</li>
-<li>Monitoring and moderation systems to detect misuse</li>
-</ul>
-</div>
+        <p>
+            Beaver, operated by <strong>Trinity Creation</strong>, is committed
+            to maintaining a safe and respectful environment for everyone who
+            uses our platform.
+        </p>
 
-<h2>User Responsibility</h2>
+        <p>
+            We take the protection of children and the prevention of child
+            sexual abuse and exploitation extremely seriously.
+        </p>
 
-<div class="box">
-<p>
-Users are responsible for the content they create and share.
-You must not upload or share any content involving minors that violates safety standards.
-</p>
-</div>
+        <p>
+            These Child Safety Standards explain our approach to preventing,
+            detecting, reporting, and responding to child sexual abuse and
+            exploitation (CSAE) and other forms of harmful activity involving
+            children on Beaver.
+        </p>
 
-<h2>Contact for Safety Issues</h2>
+        <div class="important">
 
-<div class="box">
-<p>
-If you have urgent concerns related to child safety, contact us:
-</p>
+            <strong>
+                Zero tolerance for child sexual exploitation or abuse.
+            </strong>
 
-<p>
-<strong>Email:</strong>
-<a href="mailto:trinitycreation.dev@gmail.com">
-trinitycreation.dev@gmail.com
-</a>
-</p>
+            <p style="margin-top: 8px; margin-bottom: 0;">
+                Beaver does not permit content or behavior that sexually
+                exploits, abuses, endangers, or targets children.
+            </p>
 
-<p>
-We respond to child safety concerns as quickly as possible.
-</p>
-</div>
+        </div>
 
-<p class="footer">
-© <span id="year"></span> Flap. All rights reserved.
-</p>
+    </section>
+
+
+    <!-- OUR COMMITMENT -->
+
+    <section class="card">
+
+        <h2>
+            Our Commitment
+        </h2>
+
+        <p>
+            Beaver is designed to support communities and conversations around
+            topics and interests. Because users can communicate and share
+            content, safety is an important part of operating the platform.
+        </p>
+
+        <p>
+            We are committed to:
+        </p>
+
+        <ul>
+
+            <li>
+                Prohibiting child sexual abuse and exploitation material.
+            </li>
+
+            <li>
+                Prohibiting sexual exploitation or grooming of children.
+            </li>
+
+            <li>
+                Taking reports involving child safety seriously.
+            </li>
+
+            <li>
+                Taking appropriate action against accounts that violate our
+                safety rules.
+            </li>
+
+            <li>
+                Removing prohibited content when identified, subject to
+                applicable law and our policies.
+            </li>
+
+            <li>
+                Cooperating with appropriate authorities and organizations
+                when legally required or otherwise appropriate.
+            </li>
+
+            <li>
+                Continuously improving our safety and moderation processes.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- PROHIBITED CONTENT -->
+
+    <section class="card">
+
+        <h2>
+            Prohibited Child Sexual Abuse and Exploitation Content
+        </h2>
+
+        <p>
+            Beaver strictly prohibits any content that sexually exploits or
+            abuses children.
+        </p>
+
+        <p>
+            This includes, but is not limited to:
+        </p>
+
+        <ul>
+
+            <li>
+                Child sexual abuse material (CSAM).
+            </li>
+
+            <li>
+                Sexualized images or videos involving children.
+            </li>
+
+            <li>
+                Sexual content involving or targeting minors.
+            </li>
+
+            <li>
+                Requests for sexual images or material involving minors.
+            </li>
+
+            <li>
+                Sexual solicitation or exploitation of children.
+            </li>
+
+            <li>
+                Grooming or attempts to establish inappropriate sexual
+                relationships with children.
+            </li>
+
+            <li>
+                Content that encourages, promotes, glorifies, or facilitates
+                child sexual exploitation or abuse.
+            </li>
+
+            <li>
+                Attempts to buy, sell, exchange, distribute, or obtain
+                child sexual abuse material.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- OTHER HARMFUL BEHAVIOR -->
+
+    <section class="card">
+
+        <h2>
+            Other Harmful Behavior Involving Children
+        </h2>
+
+        <p>
+            We also prohibit behavior that places children at risk of harm.
+        </p>
+
+        <div class="policy-grid">
+
+            <div class="policy-item">
+
+                <div class="policy-icon">
+                    G
+                </div>
+
+                <h3>
+                    Grooming
+                </h3>
+
+                <p>
+                    Attempts to build inappropriate relationships with minors
+                    for sexual or exploitative purposes are prohibited.
+                </p>
+
+            </div>
+
+
+            <div class="policy-item">
+
+                <div class="policy-icon">
+                    S
+                </div>
+
+                <h3>
+                    Sexual Solicitation
+                </h3>
+
+                <p>
+                    Users may not solicit, request, encourage, or exchange
+                    sexual content involving minors.
+                </p>
+
+            </div>
+
+
+            <div class="policy-item">
+
+                <div class="policy-icon">
+                    E
+                </div>
+
+                <h3>
+                    Exploitation
+                </h3>
+
+                <p>
+                    Using Beaver to exploit or facilitate the exploitation of
+                    children is strictly prohibited.
+                </p>
+
+            </div>
+
+
+            <div class="policy-item">
+
+                <div class="policy-icon">
+                    H
+                </div>
+
+                <h3>
+                    Harmful Contact
+                </h3>
+
+                <p>
+                    Behavior intended to place children in dangerous or
+                    exploitative situations is prohibited.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ZERO TOLERANCE -->
+
+    <section class="card">
+
+        <div class="zero">
+
+            <h2>
+                Zero-Tolerance Policy
+            </h2>
+
+            <p>
+                We may take immediate action when we identify activity that
+                involves child sexual abuse or exploitation.
+            </p>
+
+            <p>
+                Depending on the circumstances and applicable law, action may
+                include:
+            </p>
+
+            <ul>
+
+                <li>
+                    Removing or restricting prohibited content.
+                </li>
+
+                <li>
+                    Restricting or disabling accounts.
+                </li>
+
+                <li>
+                    Restricting access to Spaces.
+                </li>
+
+                <li>
+                    Preserving relevant information where legally permitted
+                    or required.
+                </li>
+
+                <li>
+                    Reporting suspected illegal activity to appropriate
+                    authorities or relevant organizations when required or
+                    appropriate.
+                </li>
+
+            </ul>
+
+            <p>
+                <strong>
+                    We do not permit Beaver to be used as a place to exploit,
+                    abuse, or sexually target children.
+                </strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPORTING -->
+
+    <section class="card">
+
+        <h2>
+            How to Report Child Safety Concerns
+        </h2>
+
+        <p>
+            If you encounter content or behavior on Beaver that you believe
+            involves child sexual abuse, exploitation, grooming, or another
+            serious child-safety concern, please report it to us immediately.
+        </p>
+
+        <div class="report-box">
+
+            <strong>
+                Child Safety Reports
+            </strong>
+
+            <p>
+                Send a detailed report to:
+            </p>
+
+            <a
+                class="email"
+                href="mailto:trinitycreation.dev@gmail.com?subject=Urgent%20Child%20Safety%20Report"
+            >
+                trinitycreation.dev@gmail.com
+            </a>
+
+            <p style="margin-top: 15px; margin-bottom: 0;">
+                Please include the relevant username, Space, message,
+                content, or other information that can help us understand
+                and investigate the report.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPORTING STEPS -->
+
+    <section class="card">
+
+        <h2>
+            What to Include in a Report
+        </h2>
+
+        <p>
+            When possible, provide enough information for us to identify the
+            content or account involved.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Identify the account
+                    </h3>
+
+                    <p>
+                        Provide the username or profile involved, if known.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Identify the content
+                    </h3>
+
+                    <p>
+                        Tell us which message, Space, image, link, or other
+                        content is involved.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Explain the concern
+                    </h3>
+
+                    <p>
+                        Briefly explain why you believe the content or
+                        behavior presents a child-safety concern.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <div class="step-content">
+
+                    <h3>
+                        Send the report
+                    </h3>
+
+                    <p>
+                        Email the information to
+                        trinitycreation.dev@gmail.com.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- IN APP REPORTING -->
+
+    <section class="card">
+
+        <h2>
+            In-App Reporting
+        </h2>
+
+        <p>
+            Beaver may provide in-app reporting tools that allow users to
+            report messages, accounts, or other content directly from the
+            application.
+        </p>
+
+        <p>
+            If an in-app reporting feature is available, we encourage users
+            to use it for content that violates Beaver's safety policies.
+        </p>
+
+        <p>
+            For urgent child-safety concerns, you may also contact us directly
+            using the email address provided above.
+        </p>
+
+    </section>
+
+
+    <!-- MODERATION -->
+
+    <section class="card">
+
+        <h2>
+            Safety and Moderation
+        </h2>
+
+        <p>
+            Beaver may use a combination of automated systems, user reports,
+            moderation processes, and human review to identify content or
+            behavior that may violate our policies.
+        </p>
+
+        <p>
+            Our safety systems may evolve as Beaver grows and as new risks
+            are identified.
+        </p>
+
+        <p>
+            No moderation system can guarantee that every violation will be
+            detected immediately. Users should report concerning content when
+            they encounter it.
+        </p>
+
+    </section>
+
+
+    <!-- USER RESPONSIBILITY -->
+
+    <section class="card">
+
+        <h2>
+            User Responsibilities
+        </h2>
+
+        <p>
+            Everyone using Beaver has a role in maintaining a safe community.
+        </p>
+
+        <p>
+            Users must not:
+        </p>
+
+        <ul>
+
+            <li>
+                Upload, request, distribute, or promote CSAM.
+            </li>
+
+            <li>
+                Sexualize or exploit children.
+            </li>
+
+            <li>
+                Groom or sexually solicit minors.
+            </li>
+
+            <li>
+                Encourage others to engage in child exploitation.
+            </li>
+
+            <li>
+                Use Beaver to arrange or facilitate harmful activity
+                involving children.
+            </li>
+
+            <li>
+                Attempt to evade Beaver's safety or moderation systems.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- ACTION -->
+
+    <section class="card">
+
+        <h2>
+            Enforcement
+        </h2>
+
+        <p>
+            When we determine that an account or piece of content violates
+            our child-safety policies, we may take appropriate enforcement
+            action.
+        </p>
+
+        <p>
+            Enforcement decisions may depend on the severity of the conduct,
+            the circumstances, applicable law, available evidence, and
+            whether there is a continuing risk to users.
+        </p>
+
+        <p>
+            Serious violations may result in permanent account termination
+            without prior notice where permitted or required by law.
+        </p>
+
+    </section>
+
+
+    <!-- LAW ENFORCEMENT -->
+
+    <section class="card">
+
+        <h2>
+            Cooperation With Authorities
+        </h2>
+
+        <p>
+            Trinity Creation may cooperate with law enforcement, child
+            protection authorities, and other appropriate organizations when
+            required by law or when necessary to protect children and users.
+        </p>
+
+        <p>
+            Where legally required, we may preserve or disclose relevant
+            information in response to valid legal requests or reporting
+            obligations.
+        </p>
+
+    </section>
+
+
+    <!-- SAFETY LIMITATIONS -->
+
+    <section class="card">
+
+        <h2>
+            Important Safety Information
+        </h2>
+
+        <p>
+            Beaver cannot guarantee that every person using the platform is
+            who they claim to be.
+        </p>
+
+        <p>
+            Users should exercise caution when communicating with people they
+            do not know personally.
+        </p>
+
+        <p>
+            Do not share personal information, passwords, financial
+            information, precise location information, or other sensitive
+            information with strangers.
+        </p>
+
+        <div class="blue-notice">
+
+            <strong>
+                If you believe a child is in immediate physical danger,
+                contact your local emergency services or appropriate
+                child-protection authorities immediately.
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- UPDATES -->
+
+    <section class="card">
+
+        <h2>
+            Updates to These Standards
+        </h2>
+
+        <p>
+            We may update these Child Safety Standards from time to time as
+            Beaver evolves, new safety risks emerge, or legal and regulatory
+            requirements change.
+        </p>
+
+        <p>
+            When we make significant changes, we may update the effective date
+            shown at the beginning of this page.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="card">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            For questions, child-safety concerns, or reports involving
+            Beaver, contact Trinity Creation:
+        </p>
+
+        <p>
+            <strong>
+                Trinity Creation
+            </strong>
+        </p>
+
+        <p>
+            Email:
+            <a
+                href="mailto:trinitycreation.dev@gmail.com"
+                style="color: #006fe6; font-weight: 700;"
+            >
+                trinitycreation.dev@gmail.com
+            </a>
+        </p>
+
+        <div class="important">
+
+            <strong>
+                For urgent child-safety reports, please clearly mark the
+                subject of your email as "Urgent Child Safety Report".
+            </strong>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        <strong>Beaver</strong> &bull; Spaces &amp; Stacks
+    </p>
+
+    <p>
+        &copy; <span id="year"></span>
+        Trinity Creation. All rights reserved.
+    </p>
+
+</footer>
+
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
 </script>
 
 </body>
