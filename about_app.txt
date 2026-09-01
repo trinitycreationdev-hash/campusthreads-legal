@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About Beaver - Spaces &amp; Stacks</title>
+
+    <meta
+        name="description"
+        content="Learn about Beaver, a community platform built around Spaces and Stacks that helps you discover and keep the information that matters to you."
+    >
+
+    <style>
+        :root {
+            --primary: #1685ff;
+            --primary-dark: #006fe6;
+            --text: #17191d;
+            --muted: #646b75;
+            --background: #f7f9fc;
+            --card: #ffffff;
+            --border: #e5e8ed;
+            --dark: #090a0c;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            line-height: 1.7;
+        }
+
+        /* Header */
+
+        .hero {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 80px 20px 90px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 22px;
+            border-radius: 20px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            font-weight: 900;
+            color: #ffffff;
+            box-shadow: 0 12px 35px rgba(22, 133, 255, 0.28);
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 52px;
+            font-weight: 850;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #1685ff;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 18px auto 0;
+            color: #b9c0ca;
+            font-size: 19px;
+        }
+
+        /* Main */
+
+        .container {
+            width: min(920px, calc(100% - 32px));
+            margin: -35px auto 70px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 38px;
+            margin-bottom: 22px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.035);
+        }
+
+        h2 {
+            margin: 0 0 15px;
+            font-size: 27px;
+            letter-spacing: -0.7px;
+        }
+
+        h3 {
+            margin: 25px 0 8px;
+            font-size: 19px;
+        }
+
+        p {
+            margin: 0 0 15px;
+        }
+
+        .lead {
+            font-size: 19px;
+            color: var(--muted);
+        }
+
+        /* Concept */
+
+        .concept {
+            text-align: center;
+        }
+
+        .concept h2 {
+            font-size: 32px;
+        }
+
+        .concept strong {
+            color: var(--primary-dark);
+        }
+
+        /* Feature Grid */
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            background: #fbfcfe;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 13px;
+            background: #eaf4ff;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-top: 0;
+        }
+
+        .feature p {
+            color: var(--muted);
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+
+        /* Flow */
+
+        .flow {
+            display: flex;
+            align-items: stretch;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .flow-item {
+            flex: 1;
+            padding: 22px 16px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            text-align: center;
+            background: #fbfcfe;
+        }
+
+        .flow-number {
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .flow-item h3 {
+            margin: 0 0 6px;
+            font-size: 17px;
+        }
+
+        .flow-item p {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Example */
+
+        .example {
+            background: #090a0c;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            margin-top: 24px;
+        }
+
+        .example-title {
+            color: #1685ff;
+            font-weight: 800;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .message {
+            background: #17191d;
+            border: 1px solid #292d34;
+            border-radius: 12px;
+            padding: 18px;
+            margin-top: 12px;
+        }
+
+        .message-user {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .message-text {
+            color: #c7ccd4;
+            font-size: 15px;
+        }
+
+        .stack-result {
+            margin-top: 18px;
+            padding: 17px;
+            background: #102b46;
+            border: 1px solid #1e5c8f;
+            border-radius: 12px;
+        }
+
+        .stack-result strong {
+            color: #5ab0ff;
+        }
+
+        /* Quote */
+
+        .quote {
+            border-left: 4px solid var(--primary);
+            padding: 10px 0 10px 22px;
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* List */
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        /* Mission */
+
+        .mission {
+            background: linear-gradient(
+                135deg,
+                #0b0d10,
+                #101820
+            );
+            color: white;
+            text-align: center;
+        }
+
+        .mission h2 {
+            color: white;
+        }
+
+        .mission p {
+            color: #c2c8d0;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 35px 20px 55px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--text);
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding: 60px 18px 75px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .container {
+                width: min(100% - 20px, 920px);
+                margin-top: -25px;
+            }
+
+            .card {
+                padding: 26px 20px;
+                border-radius: 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow {
+                flex-direction: column;
+            }
+
+            .arrow {
+                justify-content: center;
+                transform: rotate(90deg);
+                height: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="logo">
+        B
+    </div>
+
+    <h1>Bea<span>v</span>er</h1>
+
+    <p>
+        Communities where important conversations don't get lost.
+    </p>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="card concept">
+
+        <h2>
+            What is Beaver?
+        </h2>
+
+        <p class="lead">
+            Beaver is a community platform designed to solve a simple
+            problem: <strong>important information gets buried in
+            conversations.</strong>
+        </p>
+
+        <p>
+            In large communities, thousands of messages can be posted every
+            day. A useful internship opportunity, an important job
+            notification, a new anime announcement, a gaming update, a
+            fashion discovery, or a piece of useful information can easily
+            disappear as new conversations continue.
+        </p>
+
+        <p>
+            Beaver is designed to make sure that the information that matters
+            to you has a better chance of staying within your reach.
+        </p>
+
+    </section>
+
+
+    <!-- THE PROBLEM -->
+
+    <section class="card">
+
+        <h2>
+            The Problem
+        </h2>
+
+        <p>
+            Modern communities are full of information, but finding the
+            information you actually care about can be difficult.
+        </p>
+
+        <p>
+            Imagine a Space with 100,000 members. Hundreds or thousands of
+            messages could be exchanged every day.
+        </p>
+
+        <p>
+            Somewhere inside those conversations might be:
+        </p>
+
+        <ul>
+            <li>A new internship opportunity.</li>
+            <li>A job notification.</li>
+            <li>An important announcement.</li>
+            <li>A new anime release or update.</li>
+            <li>A gaming announcement.</li>
+            <li>A fashion discovery.</li>
+            <li>A useful educational resource.</li>
+            <li>A link or piece of information worth remembering.</li>
+        </ul>
+
+        <p>
+            But once the conversation moves forward, finding that information
+            again can become difficult.
+        </p>
+
+        <div class="quote">
+            Beaver is built around the idea that useful information shouldn't
+            simply disappear because the conversation moved on.
+        </div>
+
+    </section>
+
+
+    <!-- TWO CORE IDEAS -->
+
+    <section class="card">
+
+        <h2>
+            Two Simple Ideas: Spaces &amp; Stacks
+        </h2>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    S
+                </div>
+
+                <h3>
+                    Spaces
+                </h3>
+
+                <p>
+                    Spaces are communities where people gather, communicate,
+                    share information, and discuss topics they care about.
+                </p>
+
+                <p>
+                    A Space can be focused on almost anything — technology,
+                    internships, jobs, gaming, anime, fashion, education,
+                    hobbies, or other interests.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    T
+                </div>
+
+                <h3>
+                    Stacks
+                </h3>
+
+                <p>
+                    Stacks are personal collections created by you to
+                    represent the information you want to keep track of.
+                </p>
+
+                <p>
+                    You can create Stacks such as
+                    <strong>Internships</strong>,
+                    <strong>Jobs</strong>,
+                    <strong>Gaming</strong>,
+                    <strong>Anime Updates</strong>,
+                    <strong>Fashion</strong>,
+                    or anything else that matters to you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="card">
+
+        <h2>
+            How Beaver Works
+        </h2>
+
+        <p>
+            Beaver connects community conversations with the personal
+            interests you define through your Stacks.
+        </p>
+
+        <div class="flow">
+
+            <div class="flow-item">
+
+                <div class="flow-number">
+                    1
+                </div>
+
+                <h3>
+                    Join Spaces
+                </h3>
+
+                <p>
+                    Participate in communities and conversations.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">
+                    2
+                </div>
+
+                <h3>
+                    Create Stacks
+                </h3>
+
+                <p>
+                    Tell Beaver what types of information matter to you.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">
+                    3
+                </div>
+
+                <h3>
+                    Discover
+                </h3>
+
+                <p>
+                    Relevant information can be surfaced from conversations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXAMPLE -->
+
+    <section class="card">
+
+        <h2>
+            A Simple Example
+        </h2>
+
+        <p>
+            Suppose you create a Stack called
+            <strong>"Internships"</strong>.
+        </p>
+
+        <p>
+            You then join several Spaces where students and professionals
+            share information.
+        </p>
+
+        <div class="example">
+
+            <div class="example-title">
+                Example conversation
+            </div>
+
+            <div class="message">
+
+                <div class="message-user">
+                    Rahul
+                </div>
+
+                <div class="message-text">
+                    "Google just opened applications for their summer
+                    software engineering internship. Applications are open
+                    until October 15."
+                </div>
+
+            </div>
+
+            <div class="stack-result">
+
+                <strong>
+                    Potentially relevant to your "Internships" Stack
+                </strong>
+
+                <br>
+
+                Beaver can surface information like this so that it is easier
+                for you to find later.
+
+            </div>
+
+        </div>
+
+        <p style="margin-top: 22px;">
+            The goal is not to replace conversations. The goal is to make
+            useful information from those conversations easier to discover
+            and keep within reach.
+        </p>
+
+    </section>
+
+
+    <!-- PERSONALIZATION -->
+
+    <section class="card">
+
+        <h2>
+            Built Around What Matters to You
+        </h2>
+
+        <p>
+            Everyone uses communities differently.
+        </p>
+
+        <p>
+            One person might care about internships and jobs. Another might
+            care about gaming and technology. Someone else might want anime
+            updates, fashion discoveries, travel information, or educational
+            resources.
+        </p>
+
+        <p>
+            Your Stacks give Beaver a way to understand the categories of
+            information you consider important.
+        </p>
+
+        <p>
+            Over time, your interactions with Spaces and content can help
+            Beaver identify information that may be relevant to your
+            interests.
+        </p>
+
+        <p>
+            The goal is simple:
+        </p>
+
+        <div class="quote">
+            You choose what matters. Beaver helps you find more of it.
+        </div>
+
+    </section>
+
+
+    <!-- EXAMPLES OF STACKS -->
+
+    <section class="card">
+
+        <h2>
+            Your Stacks Can Be Anything
+        </h2>
+
+        <p>
+            There is no single way to use Stacks. You can create them around
+            whatever information you want to follow.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    I
+                </div>
+
+                <h3>
+                    Internships
+                </h3>
+
+                <p>
+                    Internship openings, application deadlines, career
+                    opportunities, and related information.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    J
+                </div>
+
+                <h3>
+                    Jobs
+                </h3>
+
+                <p>
+                    Job opportunities, hiring announcements, and career
+                    updates.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    G
+                </div>
+
+                <h3>
+                    Gaming
+                </h3>
+
+                <p>
+                    Game announcements, updates, releases, events, and
+                    community discoveries.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    A
+                </div>
+
+                <h3>
+                    Anime Updates
+                </h3>
+
+                <p>
+                    New releases, announcements, news, and discussions from
+                    the anime communities you follow.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    F
+                </div>
+
+                <h3>
+                    Fashion
+                </h3>
+
+                <p>
+                    Trends, discoveries, recommendations, and conversations
+                    around fashion.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    +
+                </div>
+
+                <h3>
+                    Anything You Want
+                </h3>
+
+                <p>
+                    Create your own Stack for any topic, interest, or type of
+                    information that matters to you.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISCOVERY -->
+
+    <section class="card">
+
+        <h2>
+            Discover Communities
+        </h2>
+
+        <p>
+            Beaver is not only about keeping information. It is also about
+            discovering the communities where that information comes from.
+        </p>
+
+        <p>
+            Through Spaces and discovery features, you can find communities
+            built around topics and interests that you care about.
+        </p>
+
+        <p>
+            Join conversations, meet people with similar interests, and
+            discover information that may be useful to you.
+        </p>
+
+    </section>
+
+
+    <!-- DIFFERENCE -->
+
+    <section class="card">
+
+        <h2>
+            What Makes Beaver Different?
+        </h2>
+
+        <p>
+            Traditional community platforms are primarily designed around
+            conversations.
+        </p>
+
+        <p>
+            Beaver is designed around both
+            <strong>conversation and information</strong>.
+        </p>
+
+        <p>
+            Spaces provide the community.
+        </p>
+
+        <p>
+            Stacks provide the personal layer that helps you keep track of
+            what matters to you.
+        </p>
+
+        <p>
+            Together, they create a system where conversations can become a
+            source of useful, personalized information rather than something
+            that simply disappears into an endless feed.
+        </p>
+
+    </section>
+
+
+    <!-- MISSION -->
+
+    <section class="card mission">
+
+        <h2>
+            Our Vision
+        </h2>
+
+        <p>
+            The internet contains an enormous amount of useful information.
+            The challenge is not always finding information — it is finding
+            the information that matters to you at the right time.
+        </p>
+
+        <p>
+            Beaver aims to build a better way for people to participate in
+            communities while keeping the information they care about close
+            at hand.
+        </p>
+
+        <p>
+            <strong>
+                Communities for conversation.
+                Stacks for what matters.
+            </strong>
+        </p>
+
+    </section>
+
+
+    <!-- OPERATED BY -->
+
+    <section class="card">
+
+        <h2>
+            About the Company
+        </h2>
+
+        <p>
+            Beaver is developed and operated by
+            <strong>Trinity Creation</strong>.
+        </p>
+
+        <p>
+            We are building Beaver with the goal of creating a community
+            experience where useful information can be discovered,
+            organized, and kept accessible to the people who care about it.
+        </p>
+
+        <p>
+            For questions, feedback, or business inquiries, contact us at:
+        </p>
+
+        <p>
+            <a href="mailto:trinitycreation.dev@gmail.com">
+                trinitycreation.dev@gmail.com
+            </a>
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        <strong>Beaver</strong> &bull; Spaces &amp; Stacks
+    </p>
+
+    <p>
+        &copy; <span id="year"></span> Trinity Creation.
+        All rights reserved.
+    </p>
+
+</footer>
+
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
